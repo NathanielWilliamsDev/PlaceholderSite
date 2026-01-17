@@ -12,6 +12,7 @@
 
     --header-color: rgb(195, 247, 175);
     --sub-heading-size: 24px;
+    --pricing-block-bg-color: rgb(14, 107, 76);
 }
 
 
@@ -115,6 +116,61 @@ img{
                   PRICING CONTENT
 
 ------------------------------------------------- */
+.pricing-content-wrapper{ /* Main wrapper that houses all blocks */
+    display: flex;
+    max-width: 800px;
+    width: 50vw;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.pricing-content-block{ /* each of the content blocks */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--pricing-block-bg-color);
+    width: 100%;
+    border-radius: 1%;
+}
+
+.pricing-content-img{
+    width: 30px;
+    height: 20px;
+    background-color: inherit;
+}
+
+.pricing-content-text{
+    background-color: inherit;
+    font-weight: 400;
+}
+
+.pricing-content-price{
+    background-color: inherit;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1px;
+}
+
+.currency{
+    background-color: inherit;
+    font-size: 16px;
+    line-height: 1.2;
+    margin-top: 4px;
+}
+
+.pricing-value{
+    background-color: inherit;
+    color: var(--header-color);
+    font-size: 36px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+
+
 
 /* ------------------------------------------------ 
 
