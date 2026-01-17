@@ -332,17 +332,32 @@ body{
   
 
   .contact-wrapper{
-    align-items: center;     /* keeps the whole block centered */
+    width: 100%;
+    align-items: center;
     gap: 18px;
   }
 
   .contact-block{
-    justify-content: center; /* centers icon+text as a group */
-    width: 100%;
-    max-width: 320px;
+    width: min(360px, 100%);     /* centered block */
+    display: flex;
+    justify-content: flex-start; /* content starts at left inside the block */
+    align-items: center;
+    gap: 14px;
+    padding: 0 6px;
+  }
+
+  .contact-icon{
+    width: 46px;
+    height: 46px;
+    flex: 0 0 46px;              /* fixed icon column */
   }
 
   .contact-info{
-    text-align: left;        /* text reads normally */
+    flex: 1;                     /* text column */
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.25;
+    word-break: normal;          /* don’t aggressively break words */
+    overflow-wrap: anywhere;
   }
 }
