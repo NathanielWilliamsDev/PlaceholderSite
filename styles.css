@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
 
+    box-sizing: border-box;
+
     font-family: "Zalando Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
@@ -11,6 +13,10 @@
     --header-color: rgb(195, 247, 175);
     --sub-heading-size: 24px;
     --pricing-block-bg-color: rgba(14, 107, 76, 0.65);
+}
+img{
+    max-width: 100%;
+    display: block;
 }
 
 body{
@@ -77,11 +83,14 @@ body{
 .image-panel{
     display: flex;
     gap: 10px;
+    width: 100%;
 }
 
 .image-panel img{
-    width: 400px;
-    height: 220px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 12px 30px rgba(0,0,0,0.28);
 }
@@ -127,9 +136,9 @@ body{
 ------------------------------------------------- */
 .pricing-content-wrapper{ /* Main wrapper that houses all blocks */
     display: flex;
+    width: 100%;
     max-width: 800px;
-    width: 50vw;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 20px;
 }
 
@@ -244,4 +253,67 @@ body{
     color: var(--header-color);
     font-size: 20px;
     font-weight: 300;
+}
+
+
+/* Tablet + down */
+@media (max-width: 820px){
+  .main-heading{ font-size: 40px; }
+  .heading-sub-heading{ font-size: 20px; }
+
+  .image-panel{
+    flex-direction: column;   /* stack images */
+    gap: 14px;
+  }
+
+  .pricing-content-wrapper{
+    flex-wrap: wrap;          /* allow wrapping */
+  }
+
+  .pricing-content-block{
+    flex: 1 1 calc(50% - 10px); /* 2 per row */
+  }
+
+  .contact-wrapper{
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+  }
+}
+
+/* Phone */
+@media (max-width: 480px){
+  .wrapper{
+    padding: 28px 16px;
+    gap: 18px;
+  }
+
+  .main-heading{
+    font-size: 30px;
+    letter-spacing: 1px;
+  }
+
+  .heading-sub-heading{
+    font-size: 18px;
+  }
+
+  .pricing-heading,
+  .contact-heading{
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+
+  .pricing-content-block{
+    flex: 1 1 100%;  /* 1 per row */
+  }
+
+  .pricing-value{ font-size: 34px; }
+  .currency{ margin-top: 3px; }
+
+  .contact-icon{ width: 46px; height: 46px; }
+  .contact-info{
+    font-size: 16px;
+    text-align: center;
+    word-break: break-word; /* helps long emails */
+  }
 }
