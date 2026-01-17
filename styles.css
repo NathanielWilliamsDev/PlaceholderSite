@@ -1,7 +1,20 @@
 *{
     margin: 0;
     padding: 0;
+    background-color: rgb(25, 75, 58);
+    color: white;
+
+    font-family: "Zalando Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+
+    --header-color: rgb(195, 247, 175);
+    --sub-heading-size: 24px;
 }
+
+
 /* ------------------------------------------------ 
 
                      WRAPPER
@@ -15,6 +28,7 @@
     display: flex;
     flex-direction:column;
     align-items: center;
+    gap: 25px;
 }
 
 /* ------------------------------------------------ 
@@ -23,11 +37,27 @@
 
 ------------------------------------------------- */
 .header{
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
 }
 
 .main-heading{
-    text-align: center;
+    font-size: 48px;
+    color: var(--header-color);
+    font-weight: 400;
+}
+
+.heading-hr{
+    border: none;
+    height: 2px;
+    background-color: rgb(12,128,64);
+    margin:5px 0 10px 0;
+}
+
+.heading-sub-heading{
+    font-size: var(--sub-heading-size);
 }
 
 /* ------------------------------------------------ 
@@ -37,11 +67,13 @@
 ------------------------------------------------- */
 .image-panel{
     display: flex;
+    gap: 10px;
 }
 
 img{
-    width: 300px;
-    height: 200px;
+    width: 400px;
+    height: 220px;
+    border-radius: 1%;
 }
 
 /* ------------------------------------------------ 
@@ -49,7 +81,32 @@ img{
                   PRICING HEADER
 
 ------------------------------------------------- */
+.pricing-header{
+    display: flex;
+    align-items:center;
+    width: 100%;
+    gap: 18px;
+}
 
+.pricing-header .pricing-line{
+    flex: 1;
+}
+
+.pricing-header .pricing-line hr{
+    border: none;
+    height: 2px;
+    background: rgb(12,128,64);
+    opacity: 0.7;
+}
+
+.pricing-heading{
+    white-space: nowrap;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--header-color);
+    font-size: var(--sub-heading-size);
+}
 
 
 
