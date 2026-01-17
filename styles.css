@@ -1,8 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    background-color: rgb(25, 75, 58);
-    color: white;
 
     font-family: "Zalando Sans", sans-serif;
     font-optical-sizing: auto;
@@ -12,9 +10,16 @@
 
     --header-color: rgb(195, 247, 175);
     --sub-heading-size: 24px;
-    --pricing-block-bg-color: rgb(14, 107, 76);
+    --pricing-block-bg-color: rgba(14, 107, 76, 0.65);
 }
 
+body{
+    background:
+    radial-gradient(circle at 50% 20%, rgba(0,0,0,0.35), transparent 55%),
+    radial-gradient(circle at 50% 120%, rgba(0,0,0,0.55), transparent 60%),
+    rgb(25, 75, 58);
+    color: white;
+}
 
 /* ------------------------------------------------ 
 
@@ -47,7 +52,8 @@
 .main-heading{
     font-size: 48px;
     color: var(--header-color);
-    font-weight: 400;
+    font-weight: 500;
+    letter-spacing: 2px;
 }
 
 .heading-hr{
@@ -59,6 +65,8 @@
 
 .heading-sub-heading{
     font-size: var(--sub-heading-size);
+    margin-top: 8px;
+    opacity: 0.9;
 }
 
 /* ------------------------------------------------ 
@@ -71,10 +79,11 @@
     gap: 10px;
 }
 
-img{
+.image-panel img{
     width: 400px;
     height: 220px;
-    border-radius: 1%;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.28);
 }
 
 /* ------------------------------------------------ 
@@ -127,27 +136,32 @@ img{
 .pricing-content-block{ /* each of the content blocks */
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 26px 20px;
     align-items: center;
     gap: 10px;
-    background-color: var(--pricing-block-bg-color);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+    background: var(--pricing-block-bg-color);
+    border: 1px solid rgba(195, 247, 175, 0.08);
     width: 100%;
-    border-radius: 1%;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.pricing-content-block:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.35);
 }
 
 .pricing-content-img{
-    width: 30px;
-    height: 20px;
-    background-color: inherit;
+    width: 55px;
+    height: 35px;
 }
 
 .pricing-content-text{
-    background-color: inherit;
     font-weight: 400;
 }
 
 .pricing-content-price{
-    background-color: inherit;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -155,14 +169,12 @@ img{
 }
 
 .currency{
-    background-color: inherit;
     font-size: 16px;
     line-height: 1.2;
     margin-top: 4px;
 }
 
 .pricing-value{
-    background-color: inherit;
     color: var(--header-color);
     font-size: 36px;
     line-height: 1;
@@ -177,9 +189,59 @@ img{
                   CONTACT HEADER
 
 ------------------------------------------------- */
+.contact-header{
+    display: flex;
+    align-items:center;
+    width: 100%;
+    gap: 18px;
+}
+
+.contact-header .contact-line{
+    flex: 1;
+}
+
+.contact-header .contact-line hr{
+    border: none;
+    height: 2px;
+    background: rgb(12,128,64);
+    opacity: 0.7;
+}
+
+.contact-heading{
+    white-space: nowrap;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--header-color);
+    font-size: var(--sub-heading-size);
+}
+
+
 
 /* ------------------------------------------------ 
 
                   CONTACT CONTENT
 
 ------------------------------------------------- */
+.contact-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.contact-block{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-icon{
+    width: 60px;
+    height: 60px;
+}
+
+.contact-info{
+    color: var(--header-color);
+    font-size: 20px;
+    font-weight: 300;
+}
