@@ -327,7 +327,22 @@ body{
   .contact-icon{ width: 46px; height: 46px; }
   .contact-info{
     font-size: 16px;
-    text-align: center;
     word-break: break-word; /* helps long emails */
+  }
+  
+
+  .contact-wrapper{
+    align-items: center;     /* keeps the whole block centered */
+    gap: 18px;
+  }
+
+  .contact-block{
+    justify-content: center; /* centers icon+text as a group */
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .contact-info{
+    text-align: left;        /* text reads normally */
   }
 }
