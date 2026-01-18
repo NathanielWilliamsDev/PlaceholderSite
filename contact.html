@@ -29,18 +29,18 @@
             <h2 class="heading-sub-heading">Professional Lawn Mowing and Pressure Washing</h2>
         </div>
 
-        <div class="image-panel"> <!-- Images -->
+        <!-- <div class="image-panel"> 
             <img src="images/stockImg1.jpg">
             <img src="images/stockImg2.webp">
-        </div>
+        </div> -->
 
-        <div class="pricing-header"> <!-- The pricing header -->
+        <!-- <div class="pricing-header"> 
             <div class="pricing-line"><hr></div>
             <h3 class="pricing-heading">OUR PRICING</h3>
             <div class="pricing-line"><hr></div>
-        </div>
+        </div> -->
 
-        <div class="pricing-content-wrapper"> <!-- The pricing content -->
+        <!-- <div class="pricing-content-wrapper"> 
             <div class="pricing-content-block">
                 <img class="pricing-content-img" src="images/grass.png">
                 <h4 class="pricing-content-text">Small Lawn</h4>
@@ -65,24 +65,86 @@
                     <span class="pricing-value">85</span>
                 </h4>
             </div>
-        </div>
+        </div> -->
 
-        <div class="contact-header"> <!-- The contact header -->
+        <!-- <div class="contact-header"> 
             <div class="contact-line"><hr></div>
             <h3 class="contact-heading">CONTACT US</h3>
             <div class="contact-line"><hr></div>
         </div>
 
-        <div class="contact-wrapper"> <!-- Contact details -->
+        <div class="contact-wrapper"> 
             <div class="contact-block">
                 <img src="images/phone.png" alt="" class="contact-icon">
-                <a href="tel:61447246293" class="contact-info">(+61) 0447 246 293</a>
+                <h4 class="contact-info">(+61) 0412 555 900</h4>
             </div>
             <div class="contact-block">
                 <img src="images/email.png" alt="" class="contact-icon">
                 <h4 class="contact-info">director@perfectlawns.com.au</h4>
             </div>
+        </div> -->
+
+        <div class="contactGrid">
+        <!-- Contact Form -->
+        <form id="quoteForm" method="POST" action="https://formspree.io/f/mreepbvz">
+          <label for="name">Name</label>
+          <input id="name" name="Name" autocomplete="name" required />
+
+          <label for="phone">Phone</label>
+          <input id="phone" name="Phone" autocomplete="tel" required />
+
+          <label for="suburb">Suburb</label>
+          <input id="suburb" name="Suburb" autocomplete="address-level2" required />
+
+          <label for="service">What do you need?</label>
+          <input id="service" name="Service" placeholder="Mowing, edging, tidy-up..." required />
+
+          <label for="message">Extra details (optional)</label>
+          <textarea id="message" name="Message" placeholder="Yard size, access, preferred day/time…"></textarea>
+
+          <!-- Helpful hidden fields for Formspree -->
+          <input type="hidden" name="_subject" value="New quote request from Perfect Lawns website" />
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+          <div class="form-actions">
+            <button class="btn primary" type="submit">Send request</button>
+            <a class="btn secondary" href="tel:+61400000000">Or call now</a>
+          </div>
+
+          <p id="formStatus" style="margin:12px 0 0;color:var(--muted);font-size:13px;"></p>
+        </form>
+
+        <!-- Business info + map -->
+        <div class="infoCard">
+          <div>
+            <strong style="font-size:16px;">Perfect Lawns & Driveways</strong><br />
+            <span style="color:var(--muted);font-size:13px;">Sydney NSW • The Hills District</span>
+          </div>
+
+          <div class="infoRow">
+            <span>Phone</span>
+            <strong>(+61) <a href="tel:+61447246293">0447 246 293</a></strong>
+          </div>
+          <div class="infoRow">
+            <span>Hours</span>
+            <strong>Mon–Sun • 8am–4pm</strong>
+          </div>
+          <div class="infoRow">
+            <span>Email</span>
+            <strong><a href="mailto:director@perfectlawns.com.au">director@perfectlawns.com.au</a></strong>
+          </div>
+
+          <div class="map" aria-label="Map">
+            <!-- Replace src with a Google Maps embed link -->
+            <iframe
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://maps.google.com/maps?width=600&amp;height=448&amp;hl=en&amp;q=rouse hill&amp;t=&amp;z=11&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+            </iframe>
+          </div>
         </div>
+      </div>
+
     </div>
 
     
